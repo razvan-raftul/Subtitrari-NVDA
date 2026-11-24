@@ -49,3 +49,9 @@ Subtitrările care sunt text (YouTube, Netflix în browser) și cele arse în im
 OCR-ul folosește limba aleasă în NVDA la Recunoașterea Windows OCR; dacă subtitrările sunt în altă limbă cu alt alfabet, limba aceea trebuie aleasă acolo.
 Uneori prinde și texte din player (titlul, butoanele) când apar jos.
 Netestat încă pe calculatorul lui Răzvan.
+
+
+## Actualizare automată (24 nov. 2026, cerut de Răzvan)
+- Depozitul public github.com/razvan-raftul/Subtitrari-NVDA (codul în addon/, workflow în .github/workflows/build.yml). Fiecare push pe main face addonul, cu versiunea 1.2.<numărul build-ului>, și îl pune în release-ul „latest” cu version.txt.
+- actualizare.py: la 20 de secunde după pornirea NVDA citește version.txt; dacă e mai nouă, descarcă și instalează. NVDA spune doar procentul din 10 în 10, cu bipurile de progres, apoi repornește.
+- Codul de lucru e în depozit; modificările se urcă cu git push din sesiune.
